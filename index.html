@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anitrivia - Anime Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-shonen">
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="logo">🎌 Anitrivia</h1>
+            <div class="user-stats">
+                <span class="score">Score: 1,250</span>
+                <span class="streak">🔥 Streak: 5</span>
+            </div>
+        </header>
+
+        <!-- Theme Selector -->
+        <section class="theme-selector">
+            <h2>Choose Your Anime Universe</h2>
+            <div class="theme-grid">
+                <div class="theme-card active">
+                    <div class="theme-preview shonen-preview"></div>
+                    <h3>⚡ Shonen Power</h3>
+                    <p>Naruto • One Piece • Dragon Ball</p>
+                    <div class="theme-status">SELECTED</div>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-preview seinen-preview"></div>
+                    <h3>⚔️ Seinen Dark</h3>
+                    <p>Attack on Titan • Tokyo Ghoul</p>
+                </div>
+                <div class="theme-card">
+                    <div class="theme-preview shojo-preview"></div>
+                    <h3>💖 Shojo Romance</h3>
+                    <p>Sailor Moon • Fruits Basket</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Game Area -->
+        <main class="game-area">
+            <!-- Difficulty Selection -->
+            <section class="game-settings">
+                <div class="setting-group">
+                    <h3>🥷 Power Level</h3>
+                    <div class="difficulty-buttons">
+                        <button class="diff-btn">Genin</button>
+                        <button class="diff-btn active">Chunin ✓</button>
+                        <button class="diff-btn">Jonin</button>
+                        <button class="diff-btn expert">Hokage</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Question Display Area -->
+            <section class="question-section">
+                <div class="question-header">
+                    <span class="question-number">Question 3 of 10</span>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <span class="timer">⏰ 0:45</span>
+                </div>
+                
+                <div class="question-content">
+                    <div class="anime-image">
+                        <img src="https://via.placeholder.com/400x300/FF6B35/FFFFFF?text=🍜+Ramen+Lover" alt="Anime Character">
+                        <div class="image-hint">⚡ Name this legendary ninja!</div>
+                        <div class="anime-series-badge">Naruto Shippuden</div>
+                    </div>
+                    
+                    <div class="question-text">
+                        <h2>Who is this orange-clad shinobi with dreams of becoming Hokage?</h2>
+                    </div>
+                </div>
+
+                <!-- Answer Options with Visual States -->
+                <div class="answer-options">
+                    <button class="answer-btn selected">🍜 Naruto Uzumaki</button>
+                    <button class="answer-btn">⚡ Sasuke Uchiha</button>
+                    <button class="answer-btn">🌀 Boruto Uzumaki</button>
+                    <button class="answer-btn">⚡ Minato Namikaze</button>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn secondary">Skip Question</button>
+                    <button class="btn primary pulse">🔥 Believe It! Submit</button>
+                </div>
+            </section>
+
+            <!-- Show what correct answer looks like -->
+            <section class="results-section">
+                <div class="result-card correct">
+                    <div class="result-icon">🎉</div>
+                    <h2>Dattebayo! Perfect!</h2>
+                    <p>That's Naruto Uzumaki, future Seventh Hokage!</p>
+                    <div class="points-earned">+100 Chakra Points</div>
+                    <div class="bonus-info">
+                        <strong>Fun Fact:</strong> Naruto's favorite food is ramen, especially from Ichiraku Ramen!
+                    </div>
+                    <button class="btn primary">Next Challenge →</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">⚡</span>
+                <span class="nav-label">Battle</span>
+                <div class="nav-indicator"></div>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">📊</span>
+                <span class="nav-label">Stats</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">🏆</span>
+                <span class="nav-label">Rankings</span>
+            </div>
+            <div class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span class="nav-label">Settings</span>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
+
