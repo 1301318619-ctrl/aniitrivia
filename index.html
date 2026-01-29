@@ -3,131 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anitrivia - Anime Trivia Game</title>
+    <title>Anitrivia - Anime Quiz Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="theme-shonen">
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="logo">🎌 Anitrivia</h1>
-            <div class="user-stats">
-                <span class="score">Score: 1,250</span>
-                <span class="streak">🔥 Streak: 5</span>
-            </div>
-        </header>
-
-        <!-- Theme Selector -->
-        <section class="theme-selector">
-            <h2>Choose Your Anime Universe</h2>
-            <div class="theme-grid">
-                <div class="theme-card active">
-                    <div class="theme-preview shonen-preview"></div>
-                    <h3>⚡ Shonen Power</h3>
-                    <p>Naruto • One Piece • Dragon Ball</p>
-                    <div class="theme-status">SELECTED</div>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-preview seinen-preview"></div>
-                    <h3>⚔️ Seinen Dark</h3>
-                    <p>Attack on Titan • Tokyo Ghoul</p>
-                </div>
-                <div class="theme-card">
-                    <div class="theme-preview shojo-preview"></div>
-                    <h3>💖 Shojo Romance</h3>
-                    <p>Sailor Moon • Fruits Basket</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Game Area -->
-        <main class="game-area">
-            <!-- Difficulty Selection -->
-            <section class="game-settings">
-                <div class="setting-group">
-                    <h3>🥷 Power Level</h3>
-                    <div class="difficulty-buttons">
-                        <button class="diff-btn">Genin</button>
-                        <button class="diff-btn active">Chunin ✓</button>
-                        <button class="diff-btn">Jonin</button>
-                        <button class="diff-btn expert">Hokage</button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Question Display Area -->
-            <section class="question-section">
-                <div class="question-header">
-                    <span class="question-number">Question 3 of 10</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                    </div>
-                    <span class="timer">⏰ 0:45</span>
-                </div>
-                
-                <div class="question-content">
-                    <div class="anime-image">
-                        <img src="https://via.placeholder.com/400x300/FF6B35/FFFFFF?text=🍜+Ramen+Lover" alt="Anime Character">
-                        <div class="image-hint">⚡ Name this legendary ninja!</div>
-                        <div class="anime-series-badge">Naruto Shippuden</div>
-                    </div>
-                    
-                    <div class="question-text">
-                        <h2>Who is this orange-clad shinobi with dreams of becoming Hokage?</h2>
-                    </div>
-                </div>
-
-                <!-- Answer Options with Visual States -->
-                <div class="answer-options">
-                    <button class="answer-btn selected">🍜 Naruto Uzumaki</button>
-                    <button class="answer-btn">⚡ Sasuke Uchiha</button>
-                    <button class="answer-btn">🌀 Boruto Uzumaki</button>
-                    <button class="answer-btn">⚡ Minato Namikaze</button>
-                </div>
-
-                <!-- Action Buttons -->
-                <div class="action-buttons">
-                    <button class="btn secondary">Skip Question</button>
-                    <button class="btn primary pulse">🔥 Believe It! Submit</button>
-                </div>
-            </section>
-
-            <!-- Show what correct answer looks like -->
-            <section class="results-section">
-                <div class="result-card correct">
-                    <div class="result-icon">🎉</div>
-                    <h2>Dattebayo! Perfect!</h2>
-                    <p>That's Naruto Uzumaki, future Seventh Hokage!</p>
-                    <div class="points-earned">+100 Chakra Points</div>
-                    <div class="bonus-info">
-                        <strong>Fun Fact:</strong> Naruto's favorite food is ramen, especially from Ichiraku Ramen!
-                    </div>
-                    <button class="btn primary">Next Challenge →</button>
-                </div>
-            </section>
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-            <div class="nav-item active">
-                <span class="nav-icon">⚡</span>
-                <span class="nav-label">Battle</span>
-                <div class="nav-indicator"></div>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">📊</span>
-                <span class="nav-label">Stats</span>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">🏆</span>
-                <span class="nav-label">Rankings</span>
-            </div>
-            <div class="nav-item">
-                <span class="nav-icon">⚙️</span>
-                <span class="nav-label">Settings</span>
-            </div>
+<body>
+    <!-- Header with Genre Navigation -->
+    <header class="header">
+        <div class="logo">
+            <h1>🎌 Anitrivia</h1>
+        </div>
+        <nav class="genre-nav">
+            <button class="genre-btn active" data-genre="shonen">Shonen</button>
+            <button class="genre-btn" data-genre="shoujo">Shoujo</button>
+            <button class="genre-btn" data-genre="seinen">Seinen</button>
+            <button class="genre-btn" data-genre="josei">Josei</button>
+            <button class="genre-btn" data-genre="isekai">Isekai</button>
+            <button class="genre-btn" data-genre="slice-of-life">Slice of Life</button>
+            <button class="genre-btn" data-genre="action">Action/Adventure</button>
+            <button class="genre-btn" data-genre="sports">Sports</button>
         </nav>
-    </div>
-</body>
-</html>
+    </header>
 
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Anime Selection -->
+        <section class="anime-selector">
+            <h2>Choose Your Anime</h2>
+            
+            <!-- Shonen Anime -->
+            <div class="anime-category" data-category="shonen">
+                <h3 class="category-title">Shonen Anime</h3>
+                <div class="anime-grid">
+                    <div class="anime-card" data-anime="naruto">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Naruto" alt="Naruto">
+                        <h4>Naruto</h4>
+                    </div>
+                    <div class="anime-card" data-anime="one-piece">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=One+Piece" alt="One Piece">
+                        <h4>One Piece</h4>
+                    </div>
+                    <div class="anime-card" data-anime="demon-slayer">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Demon+Slayer" alt="Demon Slayer">
+                        <h4>Demon Slayer</h4>
+                    </div>
+                    <div class="anime-card" data-anime="attack-titan">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Attack+on+Titan" alt="Attack on Titan">
+                        <h4>Attack on Titan</h4>
+                    </div>
+                    <div class="anime-card" data-anime="dragon-ball">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Dragon+Ball+Z" alt="Dragon Ball Z">
+                        <h4>Dragon Ball Z</h4>
+                    </div>
+                    <div class="anime-card" data-anime="bleach">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Bleach" alt="Bleach">
+                        <h4>Bleach</h4>
+                    </div>
+                    <div class="anime-card" data-anime="my-hero">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=My+Hero+Academia" alt="My Hero Academia">
+                        <h4>My Hero Academia</h4>
+                    </div>
+                    <div class="anime-card" data-anime="jujutsu-kaisen">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Jujutsu+Kaisen" alt="Jujutsu Kaisen">
+                        <h4>Jujutsu Kaisen</h4>
+                    </div>
+                    <div class="anime-card" data-anime="hunter-x-hunter">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Hunter+x+Hunter" alt="Hunter x Hunter">
+                        <h4>Hunter x Hunter</h4>
+                    </div>
+                    <div class="anime-card" data-anime="fullmetal">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Fullmetal+Alchemist" alt="Fullmetal Alchemist">
+                        <h4>Fullmetal Alchemist</h4>
+                    </div>
+                    <div class="anime-card" data-anime="black-clover">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Black+Clover" alt="Black Clover">
+                        <h4>Black Clover</h4>
+                    </div>
+                    <div class="anime-card" data-anime="fairy-tail">
+                        <img src="https://via.placeholder.com/150x200/FF6B35/FFFFFF?text=Fairy+Tail" alt="Fairy Tail">
+                        <h4>Fairy Tail</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shoujo Anime -->
+            <div class="anime-category" data-category="shoujo" style="display: none;">
+                <h3 class="category-title">Shoujo Anime</h3>
+                <div class="anime-grid">
+                    <div class="anime-card" data-anime="sailor-moon">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Sailor+Moon" alt="Sailor Moon">
+                        <h4>Sailor Moon</h4>
+                    </div>
+                    <div class="anime-card" data-anime="fruits-basket">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Fruits+Basket" alt="Fruits Basket">
+                        <h4>Fruits Basket</h4>
+                    </div>
+                    <div class="anime-card" data-anime="ouran">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Ouran+High+School" alt="Ouran High School Host Club">
+                        <h4>Ouran Host Club</h4>
+                    </div>
+                    <div class="anime-card" data-anime="cardcaptor">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Cardcaptor+Sakura" alt="Cardcaptor Sakura">
+                        <h4>Cardcaptor Sakura</h4>
+                    </div>
+                    <div class="anime-card" data-anime="kamisama">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Kamisama+Kiss" alt="Kamisama Kiss">
+                        <h4>Kamisama Kiss</h4>
+                    </div>
+                    <div class="anime-card" data-anime="maid-sama">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Maid+Sama" alt="Maid Sama">
+                        <h4>Maid Sama</h4>
+                    </div>
+                    <div class="anime-card" data-anime="skip-beat">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Skip+Beat" alt="Skip Beat">
+                        <h4>Skip Beat</h4>
+                    </div>
+                    <div class="anime-card" data-anime="lovely-complex">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Lovely+Complex" alt="Lovely Complex">
+                        <h4>Lovely Complex</h4>
+                    </div>
+                    <div class="anime-card" data-anime="kimi-ni-todoke">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Kimi+ni+Todoke" alt="From Me to You">
+                        <h4>From Me to You</h4>
+                    </div>
+                    <div class="anime-card" data-anime="whisker-away">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=A+Whisker+Away" alt="A Whisker Away">
+                        <h4>A Whisker Away</h4>
+                    </div>
+                    <div class="anime-card" data-anime="horimiya">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Horimiya" alt="Horimiya">
+                        <h4>Horimiya</h4>
+                    </div>
+                    <div class="anime-card" data-anime="blue-spring-ride">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=Ao+Haru+Ride" alt="Blue Spring Ride">
+                        <h4>Blue Spring Ride</h4>
+                    </div>
+                    <div class="anime-card" data-anime="eat-pancreas">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=I+Want+to+Eat+Pancreas" alt="I Want to Eat Your Pancreas">
+                        <h4>I Want to Eat Your Pancreas</h4>
+                    </div>
+                    <div class="anime-card" data-anime="silent-voice">
+                        <img src="https://via.placeholder.com/150x200/FF69B4/FFFFFF?text=A+Silent+Voice" alt="A Silent Voice">
+                        <h4>A Silent Voice</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seinen Anime -->
+            <div class="anime-category" data-category="seinen" style="display: none;">
+                <h3 class="category-title">Seinen Anime</h3>
+                <div class="anime-grid">
+                    <div class="anime-card" data-anime="berserk">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Berserk" alt="Berserk">
+                        <h4>Berserk</h4>
+                    </div>
+                    <div class="anime-card" data-anime="ghost-shell">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Ghost+in+Shell" alt="Ghost in the Shell">
+                        <h4>Ghost in the Shell</h4>
+                    </div>
+                    <div class="anime-card" data-anime="akira">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Akira" alt="Akira">
+                        <h4>Akira</h4>
+                    </div>
+                    <div class="anime-card" data-anime="psycho-pass">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Psycho+Pass" alt="Psycho Pass">
+                        <h4>Psycho Pass</h4>
+                    </div>
+                    <div class="anime-card" data-anime="monster">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Monster" alt="Monster">
+                        <h4>Monster</h4>
+                    </div>
+                    <div class="anime-card" data-anime="hellsing">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Hellsing" alt="Hellsing Ultimate">
+                        <h4>Hellsing Ultimate</h4>
+                    </div>
+                    <div class="anime-card" data-anime="cowboy-bebop">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Cowboy+Bebop" alt="Cowboy Bebop">
+                        <h4>Cowboy Bebop</h4>
+                    </div>
+                    <div class="anime-card" data-anime="samurai-champloo">
+                        <img src="https://via.placeholder.com/150x200/2C3E50/FFFFFF?text=Samurai+Champloo" alt="Samurai Champloo">
+                        <h4>Samurai Champloo</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Josei Anime -->
+            <div class="anime-category" data-category="josei" style="display: none;">
+                <h3 class="category-title">Josei Anime</h3>
+                <div class="anime-grid">
+                    <div class="anime-card" data-anime="nana">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Nana" alt="Nana">
+                        <h4>Nana</h4>
+                    </div>
+                    <div class="anime-card" data-anime="paradise-kiss">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Paradise+Kiss" alt="Paradise Kiss">
+                        <h4>Paradise Kiss</h4>
+                    </div>
+                    <div class="anime-card" data-anime="honey-clover">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Honey+Clover" alt="Honey and Clover">
+                        <h4>Honey and Clover</h4>
+                    </div>
+                    <div class="anime-card" data-anime="nodame">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Nodame+Cantabile" alt="Nodame Cantabile">
+                        <h4>Nodame Cantabile</h4>
+                    </div>
+                    <div class="anime-card" data-anime="usagi-drop">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Usagi+Drop" alt="Usagi Drop">
+                        <h4>Usagi Drop</h4>
+                    </div>
+                    <div class="anime-card" data-anime="princess-jellyfish">
+                        <img src="https://via.placeholder.com/150x200/8E44AD/FFFFFF?text=Princess+Jellyfish" alt="Princess Jellyfish">
+                        <h4>Princess Jellyfish</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Isekai Anime -->
+            
