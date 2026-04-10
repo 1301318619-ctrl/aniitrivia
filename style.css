@@ -6,10 +6,11 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #FFB6C1 0%, #FF69B4 100%);
     min-height: 100vh;
     transition: all 0.3s ease;
 }
+
 
 /* Header Styles */
 .header {
@@ -393,4 +394,16 @@ body.sports .answer-btn:hover { border-color: #F39C12; }
 }
 
 /* Responsive Design */
-@media (max-width: 1200px
+/* Selected anime card styling with flowing gradient */
+.anime-card.selected {
+    border: 3px solid #FF69B4;
+    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 50%, #FFB6C1 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+}
+
+.anime-card.selected h4 {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
