@@ -54,75 +54,77 @@ body {
 }
 
 .genre-btn.active {
-    background: #FF6B35;
+    background: linear-gradient(135deg, #FF69B4, #FFB6C1);
     color: white;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
 }
 
-/* Genre Color Themes */
+
+/* Genre Color Themes - Flowing Gradients */
 body.shonen { 
-    background: linear-gradient(135deg, #FF6B35, #F7931E); 
+    background: linear-gradient(135deg, #8A2BE2 0%, #9370DB 30%, #DDA0DD 70%, #E6E6FA 100%); 
 }
 body.shonen .genre-btn.active { 
-    background: #FF6B35; 
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4); 
+    background: linear-gradient(135deg, #8A2BE2, #9370DB); 
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4); 
 }
 
 body.shoujo { 
-    background: linear-gradient(135deg, #FF69B4, #FFB6C1); 
+    background: linear-gradient(135deg, #9932CC 0%, #BA55D3 30%, #DDA0DD 70%, #F8F8FF 100%); 
 }
 body.shoujo .genre-btn.active { 
-    background: #FF69B4; 
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4); 
+    background: linear-gradient(135deg, #9932CC, #BA55D3); 
+    box-shadow: 0 4px 15px rgba(153, 50, 204, 0.4); 
 }
 
 body.seinen { 
-    background: linear-gradient(135deg, #2C3E50, #34495E); 
+    background: linear-gradient(135deg, #6A5ACD 0%, #7B68EE 30%, #B19CD9 70%, #E6E6FA 100%); 
 }
 body.seinen .genre-btn.active { 
-    background: #2C3E50; 
-    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.4); 
+    background: linear-gradient(135deg, #6A5ACD, #7B68EE); 
+    box-shadow: 0 4px 15px rgba(106, 90, 205, 0.4); 
 }
 
 body.josei { 
-    background: linear-gradient(135deg, #8E44AD, #9B59B6); 
+    background: linear-gradient(135deg, #8E44AD 0%, #9B59B6 30%, #C8A2C8 70%, #F0E6FF 100%); 
 }
 body.josei .genre-btn.active { 
-    background: #8E44AD; 
+    background: linear-gradient(135deg, #8E44AD, #9B59B6); 
     box-shadow: 0 4px 15px rgba(142, 68, 173, 0.4); 
 }
 
 body.isekai { 
-    background: linear-gradient(135deg, #3498DB, #2980B9); 
+    background: linear-gradient(135deg, #7D26CD 0%, #9400D3 30%, #DA70D6 70%, #F5F0FF 100%); 
 }
 body.isekai .genre-btn.active { 
-    background: #3498DB; 
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); 
+    background: linear-gradient(135deg, #7D26CD, #9400D3); 
+    box-shadow: 0 4px 15px rgba(125, 38, 205, 0.4); 
 }
 
 body.slice-of-life { 
-    background: linear-gradient(135deg, #27AE60, #2ECC71); 
+    background: linear-gradient(135deg, #9370DB 0%, #AB82FF 30%, #D8BFD8 70%, #F8F0FF 100%); 
 }
 body.slice-of-life .genre-btn.active { 
-    background: #27AE60; 
-    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); 
+    background: linear-gradient(135deg, #9370DB, #AB82FF); 
+    box-shadow: 0 4px 15px rgba(147, 112, 219, 0.4); 
 }
 
 body.action { 
-    background: linear-gradient(135deg, #E74C3C, #C0392B); 
+    background: linear-gradient(135deg, #663399 0%, #8B7EC8 30%, #C8A2C8 70%, #F0E6FF 100%); 
 }
 body.action .genre-btn.active { 
-    background: #E74C3C; 
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4); 
+    background: linear-gradient(135deg, #663399, #8B7EC8); 
+    box-shadow: 0 4px 15px rgba(102, 51, 153, 0.4); 
 }
 
 body.sports { 
-    background: linear-gradient(135deg, #F39C12, #E67E22); 
+    background: linear-gradient(135deg, #9966CC 0%, #B19CD9 30%, #DDA0DD 70%, #FAF0E6 100%); 
 }
 body.sports .genre-btn.active { 
-    background: #F39C12; 
-    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4); 
+    background: linear-gradient(135deg, #9966CC, #B19CD9); 
+    box-shadow: 0 4px 15px rgba(153, 102, 204, 0.4); 
 }
+
 
 /* Main Content */
 .main-content {
@@ -394,16 +396,17 @@ body.sports .answer-btn:hover { border-color: #F39C12; }
 }
 
 /* Responsive Design */
-/* Selected anime card styling with flowing gradient */
+/* Selected anime card styling with flowing teal gradient */
 .anime-card.selected {
-    border: 3px solid #FF69B4;
-    background: linear-gradient(135deg, #FF1493 0%, #FF69B4 50%, #FFB6C1 100%);
+    border: 3px solid #20B2AA;
+    background: linear-gradient(135deg, #008B8B 0%, #20B2AA 50%, #AFEEEE 100%);
     color: white;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+    box-shadow: 0 8px 25px rgba(32, 178, 170, 0.4);
 }
 
 .anime-card.selected h4 {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
+
