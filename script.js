@@ -62,6 +62,16 @@ let quizData = {
         {q: "What is Natsu's magic?\nA) Fire Dragon Slayer\nB) Ice Magic", a: "A"},
         {q: "What guild is Natsu in?\nA) Fairy Tail\nB) Phantom Lord", a: "A"},
         {q: "What is Happy?\nA) A cat\nB) A dog", a: "A"}
+    ],
+    "one-punch-man": [
+        {q: "What is Saitama's hero name?\nA) One Punch Man\nB) Caped Baldy", a: "B"},
+        {q: "How did Saitama get his power?\nA) 100 push-ups daily\nB) Ate a monster", a: "A"},
+        {q: "Who is Saitama's disciple?\nA) Mumen Rider\nB) Genos", a: "B"}
+    ],
+    "dandadan": [
+        {q: "What does Momo believe in?\nA) Ghosts\nB) Aliens", a: "A"},
+        {q: "What does Okarun believe in?\nA) Ghosts\nB) Aliens", a: "B"},
+        {q: "What power does Okarun get?\nA) Turbo Granny's curse\nB) Alien technology", a: "A"}
     ]
 };
 
@@ -141,20 +151,21 @@ function showStartQuizButton(animeName) {
 // QUIZ FUNCTION
 function startQuiz(animeName) {
     if (quizData[animeName]) {
-        let questions = quizData[animeName];
-        let score = 0;
+        let questions = quizData[animeName];   // STORAGE: Gets stored questions
+        let score = 0;                         // STORAGE: Initialize score storage
         
         // Ask all 3 questions
         for (let i = 0; i < questions.length; i++) {
-            let userAnswer = prompt(questions[i].q);
-            if (userAnswer === questions[i].a) {
-                score++;
+            let userAnswer = prompt(questions[i].q);    // INPUT: User types answer
+            
+            if (userAnswer === questions[i].a) {        // PROCESSING: Compare answers
+                score++;                                // PROCESSING: Update score
             }
         }
         
-        alert("You got " + score + " out of " + questions.length + " correct!");
+        alert("You got " + score + " out of " + questions.length + " correct!");       // OUTPUT: Show results
     } else {
-        alert("Quiz coming soon for " + animeName + "!");
+        alert("Quiz coming soon for " + animeName + "!");                       // OUTPUT: No quiz message
     }
 }
 
