@@ -72,7 +72,49 @@ let quizData = {
         {q: "What does Momo believe in?\nA) Ghosts\nB) Aliens", a: "A"},
         {q: "What does Okarun believe in?\nA) Ghosts\nB) Aliens", a: "B"},
         {q: "What power does Okarun get?\nA) Turbo Granny's curse\nB) Alien technology", a: "A"}
+    ],
+    // SPORTS
+    "haikyuu": [
+    {q: "What sport does Hinata play?\nA) Volleyball\nB) Basketball", a: "A"},
+    {q: "What position is Hinata?\nA) Middle Blocker\nB) Setter", a: "A"},
+    {q: "What is Hinata's team called?\nA) Karasuno\nB) Nekoma", a: "A"}
+    ],
+    "kuroko-basketball": [
+    {q: "What is Kuroko's special skill?\nA) Misdirection\nB) Speed", a: "A"},
+    {q: "What team is Kuroko on?\nA) Seirin\nB) Touou", a: "A"},
+    {q: "Who is the ace of Seirin?\nA) Kagami\nB) Kuroko", a: "A"}
+    ],
+    "slam-dunk": [
+    {q: "What sport is Slam Dunk about?\nA) Basketball\nB) Soccer", a: "A"},
+    {q: "What is Sakuragi's hair color?\nA) Red\nB) Black", a: "A"},
+    {q: "What team does Sakuragi join?\nA) Shohoku\nB) Ryonan", a: "A"}
+    ],
+    "free": [
+    {q: "What sport is Free about?\nA) Swimming\nB) Running", a: "A"},
+    {q: "What is Haruka's nickname?\nA) Haru\nB) Hiro", a: "A"},
+    {q: "What stroke does Haruka prefer?\nA) Freestyle\nB) Butterfly", a: "A"}
+    ],
+    "yuri-on-ice": [
+    {q: "What sport is Yuri on Ice about?\nA) Figure skating\nB) Hockey", a: "A"},
+    {q: "Who is Yuri's coach?\nA) Victor\nB) Yakov", a: "A"},
+    {q: "Where is Yuri from?\nA) Japan\nB) Russia", a: "A"}
+    ],
+    "prince-tennis": [
+    {q: "What is Ryoma's signature move?\nA) Twist Serve\nB) Snake Shot", a: "A"},
+    {q: "What school does Ryoma attend?\nA) Seigaku\nB) Hyotei", a: "A"},
+    {q: "What sport does Ryoma play?\nA) Tennis\nB) Badminton", a: "A"}
+    ],
+    "eyeshield-21": [
+    {q: "What sport is Eyeshield 21 about?\nA) American Football\nB) Soccer", a: "A"},
+    {q: "What is Sena's nickname?\nA) Eyeshield 21\nB) Running Back", a: "A"},
+    {q: "What is Sena's special skill?\nA) Speed\nB) Strength", a: "A"}
+    ],
+    "ace-diamond": [
+    {q: "What sport is Ace of Diamond about?\nA) Baseball\nB) Softball", a: "A"},
+    {q: "What position does Eijun play?\nA) Pitcher\nB) Catcher", a: "A"},
+    {q: "What school does Eijun attend?\nA) Seidou\nB) Inashiro", a: "A"}
     ]
+
 };
 
 // GENRE SWITCHING FUNCTIONS
