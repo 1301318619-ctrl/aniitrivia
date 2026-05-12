@@ -152,20 +152,20 @@ function showStartQuizButton(animeName) {
 function startQuiz(animeName) {
     if (quizData[animeName]) {
         let questions = quizData[animeName]; 
-        let score = 0;                         // STORAGE: Initialize score storage
+        let score = 0;                         
         
         // Ask all 3 questions
         for (let i = 0; i < questions.length; i++) {
-            let userAnswer = prompt(questions[i].q);    // INPUT: User types answer
+            let userAnswer = prompt(questions[i].q);    
             
-            if (userAnswer === questions[i].a) {        // PROCESSING: Compare answers
-                score++;                                // PROCESSING: Update score
+            if (userAnswer === questions[i].a) {
+                score++;
             }
         }
         
-        alert("You got " + score + " out of " + questions.length + " correct!");       // OUTPUT: Show results
+        alert("You got " + score + " out of " + questions.length + " correct!");
     } else {
-        alert("Quiz coming soon for " + animeName + "!");                       // OUTPUT: No quiz message
+        alert("Quiz coming soon for " + animeName + "!");
     }
 }
 
